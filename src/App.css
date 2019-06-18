@@ -1,0 +1,26 @@
+.App-link {
+  color: #61dafb;
+}
+
+.btn-sej {
+  background-color: #97ca49;
+  color: #ffffff;
+}
+
+.btn-sej:hover {
+  background-color: #98c258;
+  color: #fff;
+}
+
+.bg-sej {
+  background-color: #e2e2e2;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
