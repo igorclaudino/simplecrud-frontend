@@ -83,7 +83,7 @@ export default class NewUser extends Component {
                                 {
                                     this.state.isError
                                         ?
-                                        <div className="alert alert-danger alert-dismissible offset-sm-2 col-sm-8" role="alert">
+                                        <div className="alert alert-danger alert-dismissible offset-sm-2 col-sm-8" role="alert" id="alert">
                                             {this.state.error}
                                             <button type="button" className="close" onClick={e => {
                                                 e.preventDefault();
@@ -132,7 +132,7 @@ export default class NewUser extends Component {
                                         onChange={this.handleInputChange}
                                     />
                                 </div>
-                                <button type="submit" className="btn btn-sej col-sm-8">{this.state._id ? <span>Salvar!</span> : <span>Criar!</span>}</button>
+                                <button type="submit" className="btn btn-sej col-sm-8" name="btn-save">{this.state._id ? <span>Salvar!</span> : <span>Criar!</span>}</button>
 
                             </form>
                         </div>

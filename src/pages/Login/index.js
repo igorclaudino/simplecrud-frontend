@@ -55,7 +55,7 @@ export default class Login extends Component {
                             {
                                 this.state.isError
                                     ?
-                                    <div className="alert alert-danger alert-dismissible offset-sm-2 col-sm-8" role="alert">
+                                    <div className="alert alert-danger alert-dismissible offset-sm-2 col-sm-8" role="alert" name="alert">
                                         {this.state.error}
                                         <button type="button" className="close" onClick={e => {
                                             e.preventDefault();
@@ -69,18 +69,18 @@ export default class Login extends Component {
                                     null
                             }
                             <div className="form-group">
-                                <input type="text" className="form-control offset-sm-2 col-sm-8" placeholder="Nome de usuário"
+                                <input type="text" className="form-control offset-sm-2 col-sm-8" placeholder="Nome de usuário" name="username"
                                     value={this.state.username}
                                     onChange={this.handleUsernameChange}
                                 />
                             </div>
                             <div className="form-group">
-                                <input type="password" className="form-control offset-sm-2 col-sm-8" placeholder="Senha"
+                                <input type="password" className="form-control offset-sm-2 col-sm-8" placeholder="Senha" name="password"
                                     value={this.state.password}
                                     onChange={this.handlePasswordChange}
                                 />
                             </div>
-                            <button type="submit" className="btn btn-sej col-sm-8">Entrar!</button>
+                            <button type="submit" className="btn btn-sej col-sm-8" name="btn-login">Entrar!</button>
 
                         </form>
                     </div>

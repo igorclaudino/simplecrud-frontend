@@ -38,7 +38,7 @@ export default class Navbar extends Component {
                     </div>
                 </div>
                 <form className="form-inline my-2 my-lg-0" onSubmit={this.performLogout}>
-                    <button className="btn btn-outline-danger my-2 my-sm-0" type="submit">Sair</button>
+                    <button className="btn btn-outline-danger my-2 my-sm-0" type="submit" name="btn-logout">Sair</button>
                 </form>
             </nav>
         );

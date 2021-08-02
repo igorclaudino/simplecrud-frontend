@@ -95,7 +95,7 @@ export default class Home extends Component {
                         </div>
                         <div className="offset-md-7 col-md-2">
                             <div className="btn-group" role="group">
-                                <button style={{ marginTop: 10, marginLeft: 10, marginBottom: 10 }} type="button" className="btn btn-primary" onClick={this.goToUserForm}>
+                                <button style={{ marginTop: 10, marginLeft: 10, marginBottom: 10 }} type="button" className="btn btn-primary" onClick={this.goToUserForm} name="btn-new-user">
                                     Novo <FontAwesomeIcon icon={faFile} />
                                 </button>
                             </div>
@@ -103,7 +103,7 @@ export default class Home extends Component {
                     </div>
                     <div className="row">
                         <div className="offset-md-1 col-md-10">
-                            <table className="table table-striped">
+                            <table className="table table-striped" name="users-table">
                                 <thead>
                                     <tr>
                                         <th scope="col">Nome</th>
@@ -123,13 +123,13 @@ export default class Home extends Component {
                                                 <td>{element.cpf}</td>
                                                 <td>
                                                     <div className="btn-group" role="group">
-                                                        <button type="button" className="btn btn-outline-warning" onClick={(e) => {
+                                                        <button type="button" className="btn btn-outline-warning" name="btn-edit" onClick={(e) => {
                                                             e.preventDefault();
                                                             this.goToUserEditForm(element);
                                                         }}>
                                                             <FontAwesomeIcon icon={faEdit} />
                                                         </button>
-                                                        <button type="button" className="btn btn-outline-danger" onClick={(e) => {
+                                                        <button type="button" className="btn btn-outline-danger" name="btn-delete" onClick={(e) => {
                                                             e.preventDefault();
                                                             this.handleShow(element);
                                                         }}>
@@ -155,14 +155,14 @@ export default class Home extends Component {
                     </Modal.Header>
                     <Modal.Body>Esta operação não pode ser desfeita!</Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={(e) => {
+                        <Button variant="secondary" name="btn-no" onClick={(e) => {
                             e.preventDefault();
                             this.handleClose();
                         }
                         }>
                             Não
                         </Button>
-                        <Button variant="primary" onClick={(e) => {
+                        <Button variant="primary" name="btn-yes" onClick={(e) => {
                             e.preventDefault();
                             this.deleteUser();
                         }
