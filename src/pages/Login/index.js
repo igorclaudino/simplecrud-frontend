@@ -55,7 +55,7 @@ export default class Login extends Component {
                             {
                                 this.state.isError
                                     ?
-                                    <div className="alert alert-danger alert-dismissible offset-sm-2 col-sm-8" role="alert" name="alert">
+                                    <div name="alert" className="alert alert-danger alert-dismissible offset-sm-2 col-sm-8" role="alert">
                                         {this.state.error}
                                         <button type="button" className="close" onClick={e => {
                                             e.preventDefault();
@@ -69,13 +69,13 @@ export default class Login extends Component {
                                     null
                             }
                             <div className="form-group">
-                                <input type="text" className="form-control offset-sm-2 col-sm-8" placeholder="Nome de usuário" name="username"
+                                <input type="text" name="username" className="form-control offset-sm-2 col-sm-8" placeholder="Nome de usuário"
                                     value={this.state.username}
                                     onChange={this.handleUsernameChange}
                                 />
                             </div>
                             <div className="form-group">
-                                <input type="password" className="form-control offset-sm-2 col-sm-8" placeholder="Senha" name="password"
+                                <input type="password" name="password" className="form-control offset-sm-2 col-sm-8" placeholder="Senha" 
                                     value={this.state.password}
                                     onChange={this.handlePasswordChange}
                                 />
