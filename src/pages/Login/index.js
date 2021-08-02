@@ -69,13 +69,13 @@ export default class Login extends Component {
                                     null
                             }
                             <div className="form-group">
-                                <input type="text" name="username" className="form-control offset-sm-2 col-sm-8" placeholder="Nome de usuário"
+                                <input type="text" id="username" className="form-control offset-sm-2 col-sm-8" placeholder="Nome de usuário"
                                     value={this.state.username}
                                     onChange={this.handleUsernameChange}
                                 />
                             </div>
                             <div className="form-group">
-                                <input type="password" name="password" className="form-control offset-sm-2 col-sm-8" placeholder="Senha" 
+                                <input type="password" id="password" className="form-control offset-sm-2 col-sm-8" placeholder="Senha" 
                                     value={this.state.password}
                                     onChange={this.handlePasswordChange}
                                 />
