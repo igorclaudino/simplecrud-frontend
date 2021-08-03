@@ -40,7 +40,7 @@ export default class NewUser extends Component {
             if (this.state._id) {
                 console.log(user);
                 await api.put(`/users/${this.state._id}`, user).then((response) => {
-                    alert('User updated successfully!');
+                    // alert('User updated successfully!');
                     this.props.history.push(`/home`);
                 }).catch((reason) => {
                     console.log(reason);
@@ -48,7 +48,7 @@ export default class NewUser extends Component {
                 });
             } else {
                 await api.post('/users', user).then((response) => {
-                    alert('User created successfully!');
+                    // alert('User created successfully!');
                     this.props.history.push(`/home`);
                 }).catch((reason) => {
                     console.log(reason);
