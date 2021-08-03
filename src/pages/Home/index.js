@@ -22,7 +22,7 @@ export default class Home extends Component {
         selectedUser: {}
     }
     componentDidMount() {
-        const token = sessionStorage.getItem('token');
+        const token = localStorage.getItem('token');
         if (!token) {
             this.props.history.push(`/`);
         } else {

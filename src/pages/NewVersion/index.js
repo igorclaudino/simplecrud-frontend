@@ -26,7 +26,7 @@ export default class NewVersion extends Component {
     optionsSelect = [];
 
     componentDidMount() {
-        const token = sessionStorage.getItem('token');
+        const token = localStorage.getItem('token');
         if (!token) {
             this.props.history.push(`/`);
         } else {

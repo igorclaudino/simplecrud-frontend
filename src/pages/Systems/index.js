@@ -16,7 +16,7 @@ export default class Systems extends Component {
     }
 
     componentDidMount() {
-        const token = sessionStorage.getItem('token');
+        const token = localStorage.getItem('token');
         // console.log(token);
         if (!token) {
             this.props.history.push(`/`);

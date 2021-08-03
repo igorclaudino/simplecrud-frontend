@@ -16,7 +16,7 @@ export default class Navbar extends Component {
     performLogout = (e) => {
         e.preventDefault();
 
-        sessionStorage.removeItem('token');
+        localStorage.removeItem('token');
 
         this.props.history.push(`/`);
 

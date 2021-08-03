@@ -19,7 +19,7 @@
 //     }
 
 //     componentDidMount() {
-//         const token = sessionStorage.getItem('token');
+//         const token = localStorage.getItem('token');
 //         if (!token) {
 //             this.props.history.push(`/`);
 //         } else {

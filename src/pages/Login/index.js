@@ -13,7 +13,7 @@ export default class Login extends Component {
     }
 
     componentDidMount() {
-        const token = sessionStorage.getItem('token');
+        const token = localStorage.getItem('token');
         if (token) {
             this.props.history.push(`/home`);
         }
@@ -28,7 +28,7 @@ export default class Login extends Component {
             password: this.state.password
         }).then((response) => {
             localStorage.setItem('loggedUser', btoa(JSON.stringify(response.data.user)));
-            sessionStorage.setItem('token', response.data.token);
+            localStorage.setItem('token', response.data.token);
             this.props.history.push(`/home`);
         }).catch((reason) => {
             this.setState({ isError: true, error: reason.response.data.error, password: '' });
